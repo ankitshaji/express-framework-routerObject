@@ -26,9 +26,11 @@ const adminsRoutes = require("./routes/admin"); //routerObject //self created mo
 // app.use((req, res, next) => {
 //   //checking if queryStringObject.property exists
 //   if (req.query.isAdmin) {
-//     next(); //allows it pass to nextMiddlwareCallback
+//     return next(); //allows it pass to nextMiddlwareCallback and not run rest of code
 //   }
-//   res.send("specific ?querystring missing - you do not have access all these routes"); //end req-res cycle
+//   // if next not returned  - causes response twice error
+//   //"Cannot set headers after they are sent to the client" error - triggering a response in the same route twice
+//   res.send("specific ?queryString missing - you do not have access all these routes"); //end req-res cycle
 // });
 //problem with this approach is that it now applies to all routes
 //solutions to execute middlewareCallback on only specfic route(ie specific method and specific path) OR specfic set of routes
