@@ -1,20 +1,21 @@
-//main file of this app that gets other npm package modules or user created modules
-// ********************************************************************************
-//RESTful webApi - using REST principles
-// ********************************************************************************
+//main file that gets passed in other npm package modules or user created modules
 const express = require("express"); //expressFunctionObject //express module
 const app = express(); //appObject
+// ********************************************************************************
+//main express application/appObject - RESTful webApi - using REST principles
+// ********************************************************************************
 const sheltersRoutes = require("./routes/shelters"); //routerObject //self created module/file needs "./"
 const dogsRoutes = require("./routes/dogs"); //routerObject //self created module/file needs "./"
 const adminsRoutes = require("./routes/admin"); //routerObject //self created module/file needs "./"
 
-// *****************************************************************************************
-//RESTful webApi crud operations pattern (route/pattern matching algorithm - order matters)
-// *****************************************************************************************
+// ***********************************************************************************************
+//Using RESTful webApi crud operations pattern (route/pattern matching algorithm - order matters)
+// ***********************************************************************************************
 
-//************************************************************************************************************
-//Grouping diffrent sets of routes using custom routerObject - combining them to main application (appObject)
-//************************************************************************************************************
+//********************************************************************************************************************
+//Grouping diffrent sets of routes using custom routerObject - combining them to main express application (appObject)
+//********************************************************************************************************************
+//combining min express application/routerObject to main express application/appObject
 
 // ***********************************************
 //(custom) middleware(hook) function expressions

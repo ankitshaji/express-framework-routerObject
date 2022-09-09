@@ -1,10 +1,10 @@
 //user created module file - can contain functionObjects,variable,classObjects etc which we can export
 
 // ********************************************************************************
-//mini - RESTful webApi - using REST principles
+//mini express appliation/routerObject - RESTful webApi - using REST principles
 // ********************************************************************************
-//isolated instance of middlwareCallbacks and routes
-
+//routerObject is an isolated instance of middlwareCallbacks and routes - (mini express application/routerObject)
+//routerObject behaves like a middlewareCallback
 const express = require("express"); //functionObject //express module
 const router = express.Router(); //functionObject.method() //routerObject
 
@@ -30,7 +30,7 @@ router.use((req, res, next) => {
 });
 
 // *****************************************************************************************
-//RESTful webApi crud operations pattern (route/pattern matching algorithm - order matters)
+//Using RESTful webApi crud operations pattern (route/pattern matching algorithm - order matters)
 // *****************************************************************************************
 
 //*******************
